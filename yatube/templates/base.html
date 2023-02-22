@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="ru">          
+  <head> 
+    <meta charset="utf-8">
+    <meta name="description" content="Краткое описание страницы"> 
+    <title>Заголовок для отображения в названии вкладки</title>    
+  </head>
+  <body>       
+    <header>
+      <nav>
+        Меню (навигация)
+      </nav>
+      {% include 'includes/header.html' %}
+    </header>
+    <main>
+      {% block title %}
+      {% include 'posts/index.html' %}
+      {% endblock %}
+      {% block content %}
+      {% include 'posts/group_list.html' %}
+      {% endblock %}
+    </main>
+    <footer>
+      {% include 'includes/footer.html' %} 
+    </footer>
+  </body>
+</html> 

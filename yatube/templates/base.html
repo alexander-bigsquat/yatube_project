@@ -3,25 +3,18 @@
   <head> 
     <meta charset="utf-8">
     <meta name="description" content="Краткое описание страницы"> 
-    <title>Заголовок для отображения в названии вкладки</title>    
+    <title>{{ title }}</title>
   </head>
   <body>       
     <header>
       <nav>
         Меню (навигация)
-      </nav>
+      </nav>  
       {% include 'includes/header.html' %}
     </header>
-    <main>
-      {% block title %}
-      {% include 'posts/index.html' %}
-      {% endblock %}
-      {% block content %}
-      {% include 'posts/group_list.html' %}
-      {% endblock %}
-    </main>
+      <h1>{{ text }}</h1>
     <footer>
-      {% include 'includes/footer.html' %} 
+      {% include 'includes/footer.html' %}
     </footer>
   </body>
 </html> 

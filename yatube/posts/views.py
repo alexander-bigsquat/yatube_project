@@ -6,9 +6,9 @@ from django.shortcuts import render
 
 def index(request):
     template = 'posts/index.html'
-    title = 'Это главная страница проекта Yatube'
+    text = 'Это главная страница проекта Yatube'
     context = {
-        'title': title,
+        'text': text,
     }
     return render(request, template, context)
 
